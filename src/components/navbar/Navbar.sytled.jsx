@@ -23,7 +23,7 @@ overflow-x: hidden;
 `;
 
 export const Logo = styled.img`
-  height: 100%;
+  height: 90px;
   display: flex;
   justify-content: left;
 `;

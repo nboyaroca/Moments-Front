@@ -1,4 +1,5 @@
 import React from 'react';
+import shotcut from '../assets/img/shotcut.png';
 import { BtNavbar, CtLogo, CtMenu, CtNavbar, Logo } from './Navbar.sytled';
 
 
@@ -6,7 +7,10 @@ export default function Navbar() {
   return (
     <>
     <CtNavbar>
-        Navbar
+        <CtLogo>
+          <Logo src={shotcut}/>
+        </CtLogo>
+
 
         <CtMenu>
             <BtNavbar>Log In</BtNavbar>
