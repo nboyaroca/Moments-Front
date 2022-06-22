@@ -1,20 +1,38 @@
-import React from 'react'
-import image from '../assets/img/London.jpg';
-import { CtCard, CtImage, CtInfo, Picture, TxtTitle } from './Card.styled'
+import React from "react";
+import {
+  BtButton,
+  CtButtons,
+  CtCard,
+  CtImage,
+  CtInfo,
+  CtText,
+  Picture,
+  TxtDescription,
+  TxtTitle,
+  TxtUser,
+} from "./Card.styled";
 
-export function Card() {
-  
-    return (
+export function Card({moment}) {
+  return (
     <CtCard>
       <CtImage>
-        <Picture src={image} />
+        <Picture src={require(`../../assets/img/${moment.imgUrl}`)} />
       </CtImage>
       <CtInfo>
-        <TxtTitle>City</TxtTitle>
+        <CtText>
+          <TxtUser>{moment.user}</TxtUser>
+          <TxtTitle>{moment.title}</TxtTitle>
+          <TxtDescription>{moment.description}</TxtDescription>
+        </CtText>
+        <CtButtons>
+          <BtButton><i className="fa-solid fa-eye"></i></BtButton>
+          <BtButton><i className="fa-solid fa-gem"></i></BtButton>
+          <BtButton><i className="fa-solid fa-pen-to-square"></i></BtButton>
+          <BtButton><i className="fa-solid fa-trash"></i></BtButton>
+        </CtButtons>
       </CtInfo>
     </CtCard>
-        
-  )
+  );
 }
 
-export default Card
+export default Card;

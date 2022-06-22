@@ -1,0 +1,25 @@
+{ "moments":
+    [
+    {
+        "id": "1",
+        "user": "user",
+        "title": "London",
+        "description": "Donec a tortor volutpat",
+        "imgUrl": "LondonBridge.jpg"
+    },
+    {
+        "id": "2",
+        "user": "user",
+        "title": "Rome",
+        "description": "Donec a tortor volutpat",
+        "imgUrl": "RomeColiseum.jpg"
+    },
+    {
+        "id": "3",
+        "user": "user",
+        "title": "New York",
+        "description": "Donec a tortor volutpat",
+        "imgUrl": "NewYorkTimesSquare.jpg"
+    }
+    ]
+}
