@@ -6,6 +6,9 @@ export const CtCard = styled.div`
   height: 300px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5% 5% 0 5%;
   border-radius: 5%;
   filter: drop-shadow(0.5em 0.5em 0.5em rgb(110, 110, 110));
   transition-duration: 0.25s;
@@ -20,10 +23,10 @@ export const CtImage = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 80%;
-  border-radius: 5% 5% 0 0;
+  height: 75%;
+  border-radius: 2.5% 2.5% 0 0;
   clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
-  overflow-x: hidden;
+  overflow: hidden;
 `;
 
 export const Picture = styled.img`
@@ -35,7 +38,10 @@ export const Picture = styled.img`
 export const CtInfo = styled.div`
   /* border: 5px solid green; */
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 5%;
+  /* padding-top: 0.5rem; */
   /* clip-path: polygon(0% 0%, 100% 110%, 100% 100%, 0% 100%); */
   font-size: 80%;
   width: 100%;
@@ -50,6 +56,7 @@ export const CtText = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: left;
+  padding-right: 10%;
 `;
 
 export const TxtUser = styled.h5`
@@ -62,7 +69,9 @@ export const TxtTitle = styled.h3`
   justify-content: left;
 `;
 
-export const TxtDescription = styled.p``;
+export const TxtDescription = styled.p`
+  text-align: left;
+`;
 
 export const CtButtons = styled.div`
   /* border: 2px solid yellow; */
@@ -89,4 +98,5 @@ export const BtButton = styled.button`
     background-color: rgb(225, 236, 249);
     color: #32383f;
   }
+  /* width: ${props => props.fullWidth ? '100%' : '500px'}; */
 `;

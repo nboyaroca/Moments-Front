@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import {
   BtButton,
   CtButtons,
@@ -12,11 +13,13 @@ import {
   TxtUser,
 } from "./Card.styled";
 
-export function Card({moment}) {
+export function Card({moment, deleteMoment}) {
   return (
     <CtCard>
       <CtImage>
-        <Picture src={moment.imgUrl} />
+        <Link to={`/moment/${moment.id}`}>
+          <Picture src={moment.imgUrl} alt={moment.title} />
+        </Link>
       </CtImage>
       <CtInfo>
         <CtText>
@@ -28,7 +31,7 @@ export function Card({moment}) {
           <BtButton><i className="fa-solid fa-eye"></i></BtButton>
           <BtButton><i className="fa-solid fa-gem"></i></BtButton>
           <BtButton><i className="fa-solid fa-pen-to-square"></i></BtButton>
-          <BtButton><i className="fa-solid fa-trash"></i></BtButton>
+          <BtButton onClick={() => deleteMoment(moment)}><i className="fa-solid fa-trash"></i></BtButton>
         </CtButtons>
       </CtInfo>
     </CtCard>

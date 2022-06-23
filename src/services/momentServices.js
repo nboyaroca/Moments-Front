@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "http://localhost:8080/moments";
+const baseUrl = "http://localhost:8080/moments/";
 
 export const momentServices = {
     
@@ -12,6 +12,11 @@ export const momentServices = {
     addMoment(data) {
         const addedMoment = axios.post(baseUrl, data).then((res) => res.data);
         return addedMoment;
+    },
+
+    deleteMoment(id) {
+        const deletedMoment = axios.delete(baseUrl + id).then((res) => res);
+        return deletedMoment;
     },
 
 };

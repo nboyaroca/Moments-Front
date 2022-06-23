@@ -17,7 +17,7 @@ export function MomentForm () {
 
     return (
         <CtForm>
-            <CtInput type="text" name="title" placeholder="Moment title" />
+            <CtInput type="text" name="title" placeholder="Moment title"  />
             <CtInput></CtInput>
         </CtForm>
     )

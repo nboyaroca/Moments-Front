@@ -16,6 +16,19 @@ export const CtMoments = styled.div`
   &::content{
     opacity: 0.5;
   }
+
+  @media screen and (max-width: 820px) {
+    grid-template-columns: 45% 45%;
+    justify-items: center;
+    background-image: none;
+  }
+
+  @media screen and (max-width: 415px) {
+    grid-template-columns: 90%;
+    justify-items: center;
+    background-image: none;
+  }
+
   `;
 
 export const CtCreate = styled.div`
