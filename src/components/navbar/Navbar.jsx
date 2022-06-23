@@ -13,7 +13,7 @@ export default function Navbar() {
 
 
         <CtMenu>
-            <BtNavbar>CREATE</BtNavbar>
+            <BtNavbar>NEW</BtNavbar>
             <BtNavbar>Log In</BtNavbar>
             <BtNavbar>Sign In</BtNavbar>
         </CtMenu>

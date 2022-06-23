@@ -32,14 +32,15 @@ export function Moments() {
     })
   }
 
+
   return (
     <>
       
       <CtMoments>
         <MomentForm></MomentForm>
-          <CtCreate>
+          {/* <CtCreate>
           <BtCreate>CREATE</BtCreate>
-          </CtCreate>     
+          </CtCreate>      */}
           {moments.map((moment, key) => (
             <Card key={key} moment={moment}/>
           ))}

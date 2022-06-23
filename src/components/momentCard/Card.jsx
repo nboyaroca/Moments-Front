@@ -16,7 +16,7 @@ export function Card({moment}) {
   return (
     <CtCard>
       <CtImage>
-        <Picture src={require(`../../assets/img/${moment.imgUrl}`)} />
+        <Picture src={moment.imgUrl} />
       </CtImage>
       <CtInfo>
         <CtText>

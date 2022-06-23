@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "http://localhost:5000/moments";
+const baseUrl = "http://localhost:8080/moments";
 
 export const momentServices = {
     

@@ -16,9 +16,7 @@ export const CtMoments = styled.div`
   &::content{
     opacity: 0.5;
   }
-  
-
-`;
+  `;
 
 export const CtCreate = styled.div`
   /* border: 2px solid blue; */
@@ -35,7 +33,6 @@ export const CtCreate = styled.div`
     box-shadow: 0 0 25px rgb(225, 236, 249);
   }
 `;
-
 
 export const BtCreate = styled.button`
   width: auto;
