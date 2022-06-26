@@ -49,10 +49,10 @@ export function Moments() {
     <>
       
       <CtMoments>
-        <MomentForm></MomentForm>
-          <CtCreate>
+        {/* <MomentForm></MomentForm> */}
+          {/* <CtCreate>
           <BtCreate>CREATE</BtCreate>
-          </CtCreate>     
+          </CtCreate>      */}
           {moments.map((moment, key) => (
             <Card key={key} moment={moment}
             deleteMoment={deleteMoment}/>

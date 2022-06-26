@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const CtCard = styled.div`
   /* border: 2px solid blue; */
-  width: 200px;
-  height: 300px;
+  width: 240px;
+  height: 360px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,6 +16,17 @@ export const CtCard = styled.div`
   &:hover {
     box-shadow: 0 0 25px rgb(225, 236, 249);
   }
+  @media screen and (max-width: 820px) {
+    width: 200px;
+    height: 300px;
+  }
+
+  @media screen and (max-width: 415px) {
+    width: 300px;
+    height: 450px;
+    font-size: 1.5rem;
+  }
+
 `;
 
 export const CtImage = styled.div`
@@ -27,6 +38,10 @@ export const CtImage = styled.div`
   border-radius: 2.5% 2.5% 0 0;
   clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
   overflow: hidden;
+  &:hover{
+    width: 102%;
+    transition: all 0.2s ease-in-out;
+  }
 `;
 
 export const Picture = styled.img`

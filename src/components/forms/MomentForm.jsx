@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { CtForm, CtInput } from "./Form.styled";
 
 
-const initForm = {
-    title: '',
-    imgUrl: '',
-};
+// const initForm = {
+//     title: '',
+//     imgUrl: '',
+// };
 
 export function MomentForm () {
 
@@ -18,7 +18,10 @@ export function MomentForm () {
     return (
         <CtForm>
             <CtInput type="text" name="title" placeholder="Moment title"  />
-            <CtInput></CtInput>
+            <CtInput type="text" name="description" placeholder="Moment description" /> 
+            <CtInput type="url" name='imgUrl' placeholder="Image URL"/>
         </CtForm>
     )
 }
+
+export default MomentForm

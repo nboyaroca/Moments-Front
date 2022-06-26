@@ -26,8 +26,12 @@ font-family: 'Lato', sans-serif;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
 
-  &::hover {
+  &:hover {
   background: #b3aca7;
   color: #e2dedb;
+  }
+
+  &:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+  color: #bbb5af;
 }
 `

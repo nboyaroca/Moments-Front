@@ -19,5 +19,10 @@ export const momentServices = {
         return deletedMoment;
     },
 
+    getMomentById(id) {
+        const moment = axios.get(baseUrl + id).then((res) => res.data);
+        return moment;
+    }
+
 };
 

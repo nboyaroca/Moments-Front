@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const CtNavbar = styled.div`
-  background-color: #bfcce1;
+  background: linear-gradient(#4E87BE, #062249);
+  border-bottom: solid 2px #062249;
   height: 5rem;
   display: flex;
   justify-content: space-between;
@@ -19,13 +20,17 @@ export const CtLogo = styled.div`
 width: 50%;
 display: flex;
 justify-content: left;
-overflow-x: hidden;
+overflow: hidden;
 `;
 
 export const Logo = styled.img`
-  height: 90px;
+  height: 60px;
   display: flex;
   justify-content: left;
+  filter: ${(props) => props.filter};
+  fill: #bfcce1;
+  stroke-width:.5;
+  fill-opacity:0;
 `;
 
 export const CtMenu = styled.div`
@@ -37,7 +42,7 @@ export const CtMenu = styled.div`
 `;
 
 export const BtNavbar = styled.button`
-  width: 2.25em;
+  width: 3.5em;
   height: 2.25em;
   border: none;
   border-radius: 10%;
