@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --main-bg-color: #bfcce1;
+}
+
 .App {
   text-align: center;
 }

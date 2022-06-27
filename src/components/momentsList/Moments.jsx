@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import React from "react";
 import { createUuid } from "../../utils/createUuid";
 import { Card } from "../momentCard/Card";
-import { MomentForm } from "../forms/MomentForm";
 import { CtCreate, CtMoments, BtCreate } from "./Moments.styled";
 // import data from "../../assets/data/dbMoments.json"
 import { momentServices } from "../../services/momentServices";
@@ -23,12 +22,12 @@ export function Moments() {
     })
   };
 
-  // const addMoment = (data) => {
-  //   data.id = createUuid();
-  //   momentServices.addMoment(data).then((res) => {
-  //     setMoments([...moments, res])
-  //   })
-  // }
+  const addMoment = (data) => {
+    data.id = createUuid();
+    momentServices.addMoment(data).then((res) => {
+      setMoments([...moments, res])
+    })
+  }
 
   const deleteMoment = (moment) => {
     let deleteConfirmed = window.confirm(`really delete ${moment.title}?`);
@@ -49,13 +48,10 @@ export function Moments() {
     <>
       
       <CtMoments>
-        {/* <MomentForm></MomentForm> */}
-          {/* <CtCreate>
-          <BtCreate>CREATE</BtCreate>
-          </CtCreate>      */}
+        
           {moments.map((moment, key) => (
             <Card key={key} moment={moment}
-            deleteMoment={deleteMoment}/>
+            deleteMoment={deleteMoment} />
           ))}
         
         

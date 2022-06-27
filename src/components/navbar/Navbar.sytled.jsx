@@ -20,6 +20,7 @@ export const CtLogo = styled.div`
 width: 50%;
 display: flex;
 justify-content: left;
+align-items: center;
 overflow: hidden;
 `;
 
@@ -52,8 +53,26 @@ export const BtNavbar = styled.button`
   right: 3%;
   transition-duration: 0.25s;
   cursor: pointer;
+  font-family: "Stick No Bills";
+  font-size: 1em;
   &:hover {
     background-color: #a6afcd;
+    color: #7881a1;
+  }
+`;
+
+export const BtMain = styled.button`
+  /* width: 3.5em;
+  height: 2.25em; */
+  background-color: transparent;
+  border: none;
+  color: #bfcce1;
+  transition-duration: 0.25s;
+  cursor: pointer;
+  font-family: "Stick No Bills";
+  font-size: 1em;
+  &:hover {
+    font-size:2em;
     color: #7881a1;
   }
 `;
