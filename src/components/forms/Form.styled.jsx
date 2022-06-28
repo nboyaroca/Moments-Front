@@ -5,7 +5,7 @@ export const CtNewMoment = styled.div`
   height: 100vh;
 `;
 
-export const CtForm = styled.div`
+export const CtForm = styled.form`
   /* position: relative; */
   display: flex;
   flex-direction: column;

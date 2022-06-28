@@ -15,7 +15,7 @@ export default function Navbar(props) {
 
 
         <CtMenu>
-            <Link to="/NewMoment"><BtNavbar>NEW</BtNavbar></Link>
+            <Link to="/form"><BtNavbar>NEW</BtNavbar></Link>
             <BtNavbar>Log In</BtNavbar>
             <BtNavbar>Sign In</BtNavbar>
         </CtMenu>
@@ -27,4 +27,3 @@ export default function Navbar(props) {
   )
 }
 
-// < Logo src={img} alt='logo' /> i importar

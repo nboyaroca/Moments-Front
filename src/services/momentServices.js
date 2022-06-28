@@ -9,14 +9,19 @@ export const momentServices = {
         return moments;
     },
 
-    addMoment(data) {
-        const addedMoment = axios.post(baseUrl, data).then((res) => res.data);
-        return addedMoment;
+    createMoment(data) {
+        const createdMoment = axios.post(baseUrl, data).then((res) => res.data);
+        return createdMoment;
     },
 
     deleteMoment(id) {
         const deletedMoment = axios.delete(baseUrl + id).then((res) => res);
         return deletedMoment;
+    },
+
+    updateMoment(id, newMoment) {
+        const updatedMoment = axios.put(baseUrl + id, newMoment).then((res) => res.data);
+        return updatedMoment;
     },
 
     getMomentById(id) {

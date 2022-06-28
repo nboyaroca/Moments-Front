@@ -2,7 +2,7 @@ import React from 'react'
 import MomentForm from '../components/forms/MomentForm'
 import Navbar from '../components/navbar/Navbar'
 
-function NewMoment() {
+function MomentFormPage() {
   return (
     <>
     <Navbar/>
@@ -11,4 +11,4 @@ function NewMoment() {
   )
 }
 
-export default NewMoment
+export default MomentFormPage

@@ -9,10 +9,8 @@ import { momentServices } from "../../services/momentServices";
 // };
 
 export function MomentForm() {
-      // const [editedMoment, setEditedMoment] = useState ('');
   const [newMoment, setNewMoment] = useState({});
-  
-      // const [isEditMode, setIsEditMode] = useState (false)
+
 
   // Esdeveniment (atent als canvis a l'input) que modificarà l'estat del formulari
   const onInputChange = (e) => {
@@ -20,36 +18,24 @@ export function MomentForm() {
   };
 
   // Les dades introduïdes són enviades
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    createMoment(newMoment);
+  const handleSubmit = () => {
+    console.log("click")
     
-
-    // resetInputsForm(e);
+    addMoment(newMoment); 
   };
 
-  // // Funció per buidar el formulari
-  // const resetInputsForm = () => {
-  //   setEditedMoment({ id: "", title: "", description: "", imgUrl: "" });
-  // };
+ 
 
     // FUNCIÓ PER AFEGIR UN MOMENT
-    const createMoment = (data) => {
-      momentServices.createMoment(data).then((res) => {
-        console.log(res)
+    const addMoment = (data) => {
+      momentServices.addMoment(data).then((res) => {
+        console.log(res) //redirigir a llista de moments
       });
     };
-
-  // //FUNCIÓ PER EDITAR UN MOMENT (omplir els camps del formulari)
-  // const editMoment = (id) => {
-  //   let editedMoment = moment.find(moment => moment.id === id);
-  //       setEditedMoment(editedMoment);
-  //       // setIsEditMode(true);
-  //   }
-
+  
   return (
     <CtNewMoment>
-      <CtForm onSubmit={handleSubmit}>
+      <CtForm>
         <Label>
           Enter the name of the new picture:
           <CtInput
@@ -80,8 +66,9 @@ export function MomentForm() {
             onChange={onInputChange}
           />
         </Label>
-        <BtSubmit type="submit">SUBMIT</BtSubmit>
+        <BtSubmit type="button" onClick={handleSubmit}>SUBMIT</BtSubmit>
         <BtSubmit>CANCEL</BtSubmit>
+
       </CtForm>
     </CtNewMoment>
   );
