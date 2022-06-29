@@ -2,9 +2,8 @@ import styled from "styled-components";
 import img from "../../assets/img/Background.jpg";
 
 export const CtMoments = styled.div`
-
   padding: 2em 0 2em 0;
-  background: linear-gradient(#4E87BE, #062249);
+  background: linear-gradient(#4e87be, #062249);
   background-color: #8b9ab3;
   display: grid;
   grid-template-columns: 20% 20% 20% 20%;
@@ -29,8 +28,7 @@ export const CtMoments = styled.div`
     justify-items: center;
     background-image: none;
   }
-
-  `;
+`;
 
 export const CtCreate = styled.div`
   /* border: 2px solid blue; */

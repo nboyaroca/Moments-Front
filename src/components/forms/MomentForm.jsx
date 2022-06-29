@@ -36,6 +36,8 @@ export function MomentForm() {
     // FUNCIÓ PER AFEGIR UN MOMENT
     const createMoment = (data) => {
       momentServices.createMoment(data).then((res) => {
+        window.location.href = "/";
+        // return <Redirect to="/"/>
         console.log(res)
       });
     };

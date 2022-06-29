@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const Anchor = styled.a`
+  text-decoration: none;
+  color: #4c5a71;
+`;
+
 export const CtCard = styled.div`
   /* border: 2px solid blue; */
   width: 240px;
@@ -28,7 +33,6 @@ export const CtCard = styled.div`
     height: 450px;
     font-size: 1.5rem;
   }
-
 `;
 
 export const CtImage = styled.div`
@@ -41,7 +45,7 @@ export const CtImage = styled.div`
   border-radius: 2.5% 2.5% 0 0;
   clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
   overflow: hidden;
-  &:hover{
+  &:hover {
     width: 102%;
     transition: all 0.2s ease-in-out;
   }
@@ -67,21 +71,21 @@ export const BtFav = styled.button`
   transition: all 0.4s ease-in-out;
   overflow: hidden;
   opacity: 50%;
-  transition:opacity 0.5s;
+  transition: opacity 0.5s;
   cursor: pointer;
-  
+
   &:hover {
     color: #b9f2ff;
-    opacity:100%;
-    transition:opacity 0.5s
+    opacity: 100%;
+    transition: opacity 0.5s;
   }
 
   @media screen and (max-width: 415px) {
     margin-right: 5.5em;
     font-size: 1.5em;
   }
-  
-  /* width: ${props => props.fullWidth ? '100%' : '500px'}; */
+
+  /* width: ${(props) => (props.fullWidth ? "100%" : "500px")}; */
 `;
 
 export const CtInfo = styled.div`
@@ -148,11 +152,10 @@ export const BtButton = styled.button`
     background-color: rgb(225, 236, 249);
     color: #32383f;
   }
-  /* width: ${props => props.fullWidth ? '100%' : '500px'}; */
-  
+  /* width: ${(props) => (props.fullWidth ? "100%" : "500px")}; */
+
   @media screen and (max-width: 415px) {
     grid-row-gap: none;
     font-size: 1.2rem;
   }
-
 `;

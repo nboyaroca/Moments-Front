@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const CtNewMoment = styled.div`
   background: linear-gradient( #062249, #4E87BE);
   height: 100vh;
+  display: flex;
+  align-items: center;
 `;
 
 export const CtForm = styled.form`
@@ -14,7 +16,7 @@ export const CtForm = styled.form`
   background-color: aliceblue;
   width: 40%;
   height: 40vh;
-  margin: 50px auto 100px auto;
+  margin: 0 auto 100px auto;
   padding: 20px;
   border: solid 1px #4c5a71;
   border-radius: 1em;
