@@ -49,6 +49,14 @@ export const BtMain = styled.button`
     /* color: #b9f2ff; */
     color: #7881a1;
   }
+  
+  @media screen and (max-width: 1085px) {
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 490px) {
+    justify-content: center;
+  }
 `;
 
 export const CtSearch = styled.div`
@@ -74,6 +82,16 @@ background-color: #bfcce1;
 --webkit-backdrop-filter: blur( 0.7rem);
 /* position: relative; */
 
+@media screen and (max-width: 1085px) {
+    background-color: transparent;
+    color: transparent;
+  }
+
+  @media screen and (max-width: 490px) {
+    background-color: transparent;
+    color: transparent;
+  }
+
 `;
 
 export const BtSearch = styled.button`
@@ -84,7 +102,7 @@ color: #bfcce1;
 
 cursor: pointer;
 &:hover {
-    font-size: 1em;
+    /* font-size: 1em; */
     transition: all 0.2s ease-in-out;
     color: #b9f2ff;
 }
@@ -115,4 +133,15 @@ export const BtNavbar = styled.button`
     background-color: #a6afcd;
     color: #7881a1;
   }
+  
+  @media screen and (max-width: 1085px) {
+    background-color: transparent;
+    color: transparent;
+  }
+
+  @media screen and (max-width: 490px) {
+    background-color: transparent;
+    color: transparent;
+  }
+
 `;

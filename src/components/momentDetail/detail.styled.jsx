@@ -5,21 +5,22 @@ export const CtDetail = styled.div`
   display: flex;
   justify-content: space-evenly;
   width: 100vw;
-  height: 200vh;
+  height: 100vh;
   background: linear-gradient( #062249, #4E87BE);
   color: #e4f4fb;
 
   @media screen and (max-width: 820px) {
     flex-direction: column;
     align-items: center;
-    height: 150vh;
+    height: 100vh;
   }
 
   @media screen and (max-width: 415px) {
     flex-direction: column;
     align-items: center;
     margin-top: 0px;
-    height: 150vh;
+    padding-top: 10%;
+    height: 100vh;
   }
 `;
 

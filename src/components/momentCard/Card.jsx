@@ -26,7 +26,8 @@ export function Card({moment, deleteMoment, editMoment}) {
       </CtImage>
       <CtInfo>
           <CtButtons>
-          <BtButton onClick={() => editMoment(moment)}><Anchor href="/form"><span><i className="fa-solid fa-pen-to-square"></i></span></Anchor></BtButton>
+          {/* <BtButton onClick={() => editMoment(moment)}><i className="fa-solid fa-pen-to-square"></i></BtButton> */}
+          <BtButton /*onClick={() => editMoment(moment)}*/><Anchor href={`/form/${moment.id}`}><span><i className="fa-solid fa-pen-to-square"></i></span></Anchor></BtButton>
           <BtButton onClick={() => deleteMoment(moment)}><i className="fa-solid fa-trash"></i></BtButton>
         </CtButtons>
         <CtText>
@@ -40,3 +41,5 @@ export function Card({moment, deleteMoment, editMoment}) {
 }
 
 export default Card;
+
+

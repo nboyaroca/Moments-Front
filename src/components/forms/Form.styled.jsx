@@ -69,10 +69,20 @@ export const CtInput = styled.input`
     color: #dbdce2;
   }
 
+  @media screen and (max-width: 1050px) {
+    width: 17rem;
+    font-size: 0.9rem;
+  }
+
   @media screen and (max-width: 415px) {
     width: 17rem;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
+`;
+
+export const CtButtons = styled.div`
+display: flex;
+justify-content: space-evenly;
 `;
 
 export const BtSubmit = styled.button`

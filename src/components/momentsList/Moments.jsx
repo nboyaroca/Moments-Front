@@ -6,7 +6,10 @@ import { CtMoments } from "./Moments.styled";
 import { momentServices } from "../../services/momentServices";
 
 export function Moments() {
+  
   const [moments, setMoments] = useState([]);
+  // const [momentToEdit, setMomentToEdit] = useState();
+  // const [isEditMode, setIsEditMode] = useState(false);
 
   useEffect(() => {
     getAllMoments();
@@ -32,13 +35,34 @@ export function Moments() {
   // let filterMoments = moments.filter(item => item.id !==moment.id);
   // setMoments(filterMoments);
 
+  //FUNCIÓ PER EDITAR UN MOMENT, CARREGAR LES DADES DEL FORUMLARI
+  // const editMoment = (moment) => { // agafa el moment de la card botó "edit"
+  //   setMomentToEdit(moment);
+  // //   setIsEditMode(!isEditMode);
+  // //   console.log(isEditMode);
+  //   console.log(momentToEdit);
+  // };
 
+  // COMPROVAR SI LA FUNCIÓ ÉS NECESSÀRIA!!!!!!!!!
+  // const editMoment = (moment) => {
+  //   setIsEditMode(!isEditMode);
+  //   // console.log(isEditMode)
+  //   momentServices.getMomentById(moment.id).then(res => {
+  //       setMomentToEdit(res)
+
+  //   })
+  // }
 
   return (
     <>
       <CtMoments>
         {moments.map((moment, key) => (
-          <Card key={key} moment={moment} deleteMoment={deleteMoment} />
+          <Card
+            key={key}
+            moment={moment}
+            deleteMoment={deleteMoment}
+            /*editMoment={editMoment}*/
+          />
         ))}
       </CtMoments>
     </>

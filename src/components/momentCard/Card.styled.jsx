@@ -120,6 +120,7 @@ export const TxtTitle = styled.h1`
   color: #3d4156;
   display: flex;
   justify-content: left;
+  line-break: anywhere;
 `;
 
 export const TxtDescription = styled.p`

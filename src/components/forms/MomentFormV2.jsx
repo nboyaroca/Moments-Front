@@ -22,6 +22,7 @@ export function MomentForm() {
     console.log("click")
     
     addMoment(newMoment); 
+    window.location.href = "/";
   };
 
  

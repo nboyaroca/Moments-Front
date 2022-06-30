@@ -12,6 +12,7 @@ export default function Router() {
             <Route path="/" element={<App />}/>
             <Route path="/moment/:id" element={<MomentPage/>}/>
             <Route path="/form" element={<MomentFormPage/>}/>
+            <Route path="/form/:id" element={<MomentFormPage/>}/>
         </Routes>
     </BrowserRouter>
   )

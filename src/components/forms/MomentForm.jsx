@@ -1,18 +1,38 @@
 import React, { useState } from "react";
-import { CtForm, CtInput, Label, CtNewMoment, BtSubmit } from "./Form.styled";
+import {
+  CtForm,
+  CtInput,
+  Label,
+  CtNewMoment,
+  BtSubmit,
+  CtButtons,
+} from "./Form.styled";
 import { momentServices } from "../../services/momentServices";
+import { useNavigate, useParams } from "react-router-dom";
+import { useEffect } from "react";
 
-// const initForm = {
-//     title: '',
-//     description: '',
-//     imgUrl: '',
-// };
+export function MomentForm(moments) {
+  const [id, setId] = useState(useParams().id);
+  // const {id} = useParams();
 
-export function MomentForm() {
-      // const [editedMoment, setEditedMoment] = useState ('');
   const [newMoment, setNewMoment] = useState({});
-  
-      // const [isEditMode, setIsEditMode] = useState (false)
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (id) getMomentById()
+  }, [id]);
+
+
+  // FUNCIÓ PER CRIDAR EL MOMENT PER ID
+  const getMomentById = () => {
+
+    momentServices.getMomentById(id).then((res) => {
+      if (res) {
+        setNewMoment({title:res.title, description:res.description, imgUrl:res.imgUrl});
+      }
+    });
+  };
 
   // Esdeveniment (atent als canvis a l'input) que modificarà l'estat del formulari
   const onInputChange = (e) => {
@@ -22,32 +42,47 @@ export function MomentForm() {
   // Les dades introduïdes són enviades
   const handleSubmit = (e) => {
     e.preventDefault();
-    createMoment(newMoment);
-    
 
-    // resetInputsForm(e);
+    !id ? createMoment() : updateMoment();
+
+    resetInputsForm();
   };
 
-  // // Funció per buidar el formulari
-  // const resetInputsForm = () => {
-  //   setEditedMoment({ id: "", title: "", description: "", imgUrl: "" });
-  // };
+ 
 
-    // FUNCIÓ PER AFEGIR UN MOMENT
-    const createMoment = (data) => {
-      momentServices.createMoment(data).then((res) => {
-        window.location.href = "/";
-        // return <Redirect to="/"/>
-        console.log(res)
-      });
-    };
+  // FUNCIÓ PER AFEGIR UN MOMENT
+  const createMoment = () => {
+    momentServices.createMoment(newMoment).then((res) => {
+      navigate("/");
+      // window.location.href = "/";
+      // return <Redirect to="/"/>
+      console.log(res);
+    });
+  };
 
-  // //FUNCIÓ PER EDITAR UN MOMENT (omplir els camps del formulari)
-  // const editMoment = (id) => {
-  //   let editedMoment = moment.find(moment => moment.id === id);
-  //       setEditedMoment(editedMoment);
-  //       // setIsEditMode(true);
-  //   }
+  // FUNCIÓ PER CANVIAR UN MOMENT
+  const updateMoment = () => {
+    momentServices.updateMoment(id, newMoment).then((res) => {
+      
+      // let momentToUpdate = moments.map((moment) =>
+      //   moment.id === newMoment.id ? newMoment : moment
+      // );
+      // setNewMoment(momentToUpdate);
+      if (res) {
+        console.log("updated")
+      navigate("/");
+    }
+    });
+    
+    // resetInputsForm();
+    // setIsEditMode(false);
+  };
+
+   // Funció per buidar el formulari
+   const resetInputsForm = () => {
+    setNewMoment({title:"", description:"", imgUrl:""});
+  };
+
 
   return (
     <CtNewMoment>
@@ -55,7 +90,7 @@ export function MomentForm() {
         <Label>
           Enter the name of the new picture:
           <CtInput
-            type="text"
+            type="Text"
             name="title"
             placeholder="Moment title"
             value={newMoment.title}
@@ -65,7 +100,7 @@ export function MomentForm() {
         <Label>
           Write a description of the picture:
           <CtInput
-            type="text"
+            type="Text"
             name="description"
             placeholder="Moment description"
             value={newMoment.description}
@@ -82,8 +117,14 @@ export function MomentForm() {
             onChange={onInputChange}
           />
         </Label>
-        <BtSubmit type="submit">SUBMIT</BtSubmit>
-        <BtSubmit>CANCEL</BtSubmit>
+        <CtButtons>
+          {id ? (
+            <BtSubmit type="submit">EDIT</BtSubmit>
+          ) : (
+            <BtSubmit type="submit">SUBMIT</BtSubmit>
+          )}
+          <BtSubmit type="reset" onClick={resetInputsForm}>CANCEL</BtSubmit>
+        </CtButtons>
       </CtForm>
     </CtNewMoment>
   );
