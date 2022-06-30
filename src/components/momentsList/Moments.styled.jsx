@@ -10,9 +10,7 @@ export const CtMoments = styled.div`
   grid-template-columns: 20% 20% 20% 20%;
   grid-row-gap: 2em;
   justify-content: space-evenly;
-  /* position: relative; */
-  /* justify-items: center; */
-
+  
   /* background-image: url(${img});
   &::content{
     opacity: 0.5;
@@ -21,13 +19,13 @@ export const CtMoments = styled.div`
   @media screen and (max-width: 1085px) {
     grid-template-columns: 45% 45%;
     justify-items: center;
-    background-image: none;
+    height: auto;
   }
 
   @media screen and (max-width: 490px) {
     grid-template-columns: 90%;
     justify-items: center;
-    background-image: none;
+    height: auto;
   }
 `;
 
@@ -40,7 +38,6 @@ export const CtCreate = styled.div`
   border-radius: 5%;
   filter: drop-shadow(0.5em 0.5em 0.5em rgb(110, 110, 110));
   transition-duration: 0.25s;
-  /* position: absolute; */
   background-color: #bfcce1;
   &:hover {
     box-shadow: 0 0 25px rgb(225, 236, 249);

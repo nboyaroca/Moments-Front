@@ -60,7 +60,7 @@ export const CtInput = styled.input`
 
   &:hover {
     background: #dbdce2;
-    color: #dbdfe2;
+    color: #394368;
   }
 
   &:focus::-webkit-input-placeholder,
@@ -83,6 +83,7 @@ export const CtInput = styled.input`
 export const CtButtons = styled.div`
 display: flex;
 justify-content: space-evenly;
+column-gap: 40px
 `;
 
 export const BtSubmit = styled.button`

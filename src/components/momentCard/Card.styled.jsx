@@ -125,6 +125,7 @@ export const TxtTitle = styled.h1`
 
 export const TxtDescription = styled.p`
   text-align: end;
+  line-break: anywhere;
 `;
 
 export const CtButtons = styled.div`

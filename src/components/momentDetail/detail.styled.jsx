@@ -20,7 +20,7 @@ export const CtDetail = styled.div`
     align-items: center;
     margin-top: 0px;
     padding-top: 10%;
-    height: 100vh;
+    /* height: 100vh; */
   }
 `;
 
@@ -95,4 +95,5 @@ export const TxtTitle = styled.h1`
 
 export const TxtDescription = styled.h5`
   line-height: 2em;
+  line-break: anywhere;
 `;

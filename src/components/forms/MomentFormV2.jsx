@@ -11,6 +11,21 @@ import { momentServices } from "../../services/momentServices";
 export function MomentForm() {
   const [newMoment, setNewMoment] = useState({});
 
+  // useEffect(() => {
+  //   setId();
+  //   setNewMoment({});
+  // }, []);
+
+  // useEffect(() => {
+  //   const path = window.location.pathname;
+  //   const pathId = path.substring(path.lastIndexOf("/")+1, path.length)
+
+  //   if (pathId === undefined || pathId === null) {
+  //     setId();
+  //   }
+  // }, []);
+
+
 
   // Esdeveniment (atent als canvis a l'input) que modificarà l'estat del formulari
   const onInputChange = (e) => {
@@ -33,6 +48,19 @@ export function MomentForm() {
         console.log(res) //redirigir a llista de moments
       });
     };
+
+    // FUNCIÓ PER CANVIAR UN MOMENT
+    const updateMoment = () => {
+    momentServices.updateMoment(id, newMoment).then((res) => {
+    
+    let momentToUpdate = moments.map((moment) =>
+      moment.id === newMoment.id ? newMoment : moment
+    );
+    setNewMoment(momentToUpdate);
+        navigate("/");
+    }
+    )};
+
   
   return (
     <CtNewMoment>

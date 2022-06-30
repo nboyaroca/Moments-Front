@@ -12,24 +12,24 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useEffect } from "react";
 
 export function MomentForm(moments) {
-  const [id, setId] = useState(useParams().id);
-  // const {id} = useParams();
 
+  const {id} = useParams();
   const [newMoment, setNewMoment] = useState({});
-
   const navigate = useNavigate();
 
+  // useEffect(() => {
+  //   if (id) getMomentById()
+  // }, [id]);
+
   useEffect(() => {
-    if (id) getMomentById()
+    getMomentById(id)
   }, [id]);
 
-
   // FUNCIÓ PER CRIDAR EL MOMENT PER ID
-  const getMomentById = () => {
-
+  const getMomentById = (id) => {
     momentServices.getMomentById(id).then((res) => {
       if (res) {
-        setNewMoment({title:res.title, description:res.description, imgUrl:res.imgUrl});
+        setNewMoment(res);
       }
     });
   };
@@ -54,21 +54,13 @@ export function MomentForm(moments) {
   const createMoment = () => {
     momentServices.createMoment(newMoment).then((res) => {
       navigate("/");
-      // window.location.href = "/";
-      // return <Redirect to="/"/>
-      console.log(res);
     });
   };
 
   // FUNCIÓ PER CANVIAR UN MOMENT
   const updateMoment = () => {
     momentServices.updateMoment(id, newMoment).then((res) => {
-      
-      // let momentToUpdate = moments.map((moment) =>
-      //   moment.id === newMoment.id ? newMoment : moment
-      // );
-      // setNewMoment(momentToUpdate);
-      if (res) {
+        if (res) {
         console.log("updated")
       navigate("/");
     }
