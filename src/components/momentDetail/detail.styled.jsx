@@ -6,7 +6,7 @@ export const CtDetail = styled.div`
   justify-content: space-evenly;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient( #062249, #4E87BE);
+  background: linear-gradient(#062249, #4e87be);
   color: #e4f4fb;
 
   @media screen and (max-width: 820px) {
@@ -25,7 +25,7 @@ export const CtDetail = styled.div`
 `;
 
 export const CtMoment = styled.div`
-  /* border: solid 2px red; */
+  border: solid 2px red;
   width: 45%;
   height: 66vh;
   margin: 5%;
@@ -65,6 +65,7 @@ export const ImgPicture = styled.img`
 `;
 
 export const CtInfo = styled.div`
+  border: solid 2px green;
   width: 45%;
   height: 58vh;
   margin-top: 10%;
@@ -77,7 +78,6 @@ export const CtInfo = styled.div`
     width: 80%;
     align-items: center;
     height: 200vh;
-    
   }
 
   @media screen and (max-width: 415px) {
@@ -96,4 +96,20 @@ export const TxtTitle = styled.h1`
 export const TxtDescription = styled.h5`
   line-height: 2em;
   line-break: anywhere;
+`;
+
+export const CtComments = styled.div`
+  border: solid 2px yellow;
+  width: 25%;
+  
+  @media screen and (max-width: 820px) {
+    width: 80%;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 415px) {
+    width: 80%;
+    align-items: center;
+    margin-top: none;
+  }
 `;
