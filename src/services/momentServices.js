@@ -1,5 +1,6 @@
 import axios from "axios";
 
+
 const baseUrl = "http://localhost:8080/moments/";
 
 export const momentServices = {
@@ -27,7 +28,18 @@ export const momentServices = {
     getMomentById(id) {
         const moment = axios.get(baseUrl + id).then((res) => res.data);
         return moment;
-    }
+    },
+
+    // getBySearch(search) {
+    //     const search = axios.get(baseUrl, URLSearchParams()).then((res) => res);
+    //     return search;
+    // }
+
+    
+    getBySearch(search) {
+        const searched = axios.get(`${baseUrl}?search=${search}`).then((res) => res.data);
+        return searched;
+        },
 
 };
 

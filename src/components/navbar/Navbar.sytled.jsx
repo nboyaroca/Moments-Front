@@ -59,7 +59,7 @@ export const BtMain = styled.button`
   }
 `;
 
-export const CtSearch = styled.div`
+export const CtSearch = styled.form`
 width: 80%;
 display: flex;
 justify-content: space-evenly;
