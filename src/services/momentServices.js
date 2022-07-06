@@ -30,16 +30,10 @@ export const momentServices = {
         return moment;
     },
 
-    // getBySearch(search) {
-    //     const search = axios.get(baseUrl, URLSearchParams()).then((res) => res);
-    //     return search;
-    // }
-
-    
     getBySearch(search) {
         const searched = axios.get(`${baseUrl}?search=${search}`).then((res) => res.data);
         return searched;
-        },
+    },
 
 };
 

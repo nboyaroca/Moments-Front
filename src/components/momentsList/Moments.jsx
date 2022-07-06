@@ -1,22 +1,31 @@
 import { useEffect, useState } from "react";
 import React from "react";
 import { Card } from "../momentCard/Card";
-import { CtMoments } from "./Moments.styled";
+import { CtMoments, CtSearch } from "./Moments.styled";
 // import data from "../../assets/data/dbMoments.json"
 import { momentServices } from "../../services/momentServices";
+import Search from "../search/Search"; //per importar per default no curly brakets
 
 export function Moments() {
-  
   const [moments, setMoments] = useState([]);
   // const [momentToEdit, setMomentToEdit] = useState();
   // const [isEditMode, setIsEditMode] = useState(false);
 
+  const [search, setSearch] = useState("");
+
   useEffect(() => {
-    getAllMoments();
-  }, []);
+    search === "" ? getAllMoments() : getBySearch(search);
+  }, [search, moments]);
 
   const getAllMoments = () => {
     momentServices.getAllMoments().then((res) => {
+      setMoments(res);
+    });
+  };
+
+  // FUNCIÓ PER BUSCAR AMB EL SEARCHER
+  const getBySearch = (data) => {
+    momentServices.getBySearch(data).then((res) => {
       setMoments(res);
     });
   };
@@ -31,6 +40,7 @@ export function Moments() {
       }
     });
   };
+
   //una altra versió per agafar els moments
   // let filterMoments = moments.filter(item => item.id !==moment.id);
   // setMoments(filterMoments);
@@ -55,12 +65,20 @@ export function Moments() {
 
   return (
     <>
+      <CtSearch>
+        <Search
+          getBySearch={getBySearch}
+          search={search}
+          setSearch={setSearch}
+        />
+      </CtSearch>
       <CtMoments>
         {moments.map((moment, key) => (
           <Card
             key={key}
             moment={moment}
             deleteMoment={deleteMoment}
+
             /*editMoment={editMoment}*/
           />
         ))}

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import img from "../../assets/img/Background.jpg";
 
 export const CtMoments = styled.div`
-  /* height: 100vh; */
+  height: 100vh;
   padding: 2em 0 2em 0;
   background: linear-gradient(#4e87be, #062249);
   background-color: #8b9ab3;
@@ -60,3 +60,17 @@ export const BtCreate = styled.button`
     color: #7881a1;
   }
 `;
+
+
+
+//falta estilar el search
+export const CtSearch = styled.div`
+width: 80%;
+background-color: blue;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+margin-right: 10%;
+position: relative;
+`;
+
