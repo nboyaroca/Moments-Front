@@ -59,8 +59,8 @@ export const Picture = styled.img`
 
 export const BtFav = styled.button`
   position: absolute;
-  margin-top: 0.25em;
-  margin-right: 7em;
+  top: 0.25em;
+  left: 0.25em;
   background-color: transparent;
   color: #f6f6e0;
   width: 1em;

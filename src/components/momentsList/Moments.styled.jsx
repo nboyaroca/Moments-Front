@@ -65,8 +65,8 @@ export const BtCreate = styled.button`
 
 //falta estilar el search
 export const CtSearch = styled.div`
-width: 80%;
-background-color: blue;
+width: 100%;
+background-color: #062249;
 display: flex;
 justify-content: space-evenly;
 align-items: center;
