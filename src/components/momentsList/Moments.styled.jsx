@@ -4,7 +4,7 @@ import img from "../../assets/img/Background.jpg";
 export const CtMoments = styled.div`
   height: 100vh;
   padding: 2em 0 2em 0;
-  background: linear-gradient(#4e87be, #062249);
+  background: linear-gradient(#283954, #9fc3e3);
   background-color: #8b9ab3;
   display: grid;
   grid-template-columns: 20% 20% 20% 20%;
@@ -17,6 +17,12 @@ export const CtMoments = styled.div`
   } */
 
   @media screen and (max-width: 1085px) {
+    grid-template-columns: 30% 30% 30%;
+    justify-items: center;
+    height: 100vh;
+  }
+
+  @media screen and (max-width: 820px) {
     grid-template-columns: 45% 45%;
     justify-items: center;
     height: auto;

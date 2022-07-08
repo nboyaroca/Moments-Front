@@ -4,9 +4,10 @@ export const CtDetail = styled.div`
   /* margin-top: 15em; */
   display: flex;
   justify-content: space-evenly;
+  /* column-gap: 5%; */
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(#062249, #4e87be);
+  background: linear-gradient(#283954, #9fc3e3);
   color: #e4f4fb;
 
   @media screen and (max-width: 820px) {
@@ -26,16 +27,15 @@ export const CtDetail = styled.div`
 
 export const CtMoment = styled.div`
   /* border: solid 2px red; */
-  width: 35%;
-  height: 55vh;
+  width: 30vw;
+  /* height: 55vh; */
   /* margin: 5%; */
   margin-top: 5%;
   max-width: 400px;
   /* gap: 20px; */
   overflow: hidden;
 
-  border-radius: 5%;
-  filter: drop-shadow(0.5em 0.5em 0.5em rgb(110, 110, 110));
+  filter: drop-shadow(0.5em 0.5em 0.5em #bfcce1);
   transition-duration: 0.25s;
 
   &:hover img {
@@ -50,7 +50,8 @@ export const CtMoment = styled.div`
 
   @media screen and (max-width: 415px) {
     width: 80%;
-    min-height: 50vh;
+    height: 55vh;
+    /* min-height: 50vh; */
   }
 `;
 
@@ -58,7 +59,7 @@ export const ImgPicture = styled.img`
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: 5%;
+  border-radius: 1em;
 
   /* -webkit-box-reflect: below 2px
     linear-gradient(transparent, transparent, #0004); */
@@ -70,7 +71,7 @@ export const ImgPicture = styled.img`
 
 export const CtInfo = styled.div`
   /* border: solid 2px green; */
-  width: 35%;
+  width: 25vw;
   height: 55vh;
   margin-top: 5%;
   display: flex;
@@ -81,33 +82,34 @@ export const CtInfo = styled.div`
   @media screen and (max-width: 820px) {
     width: 80%;
     align-items: center;
-    height: 200vh;
+    /* height: 200vh; */
   }
 
   @media screen and (max-width: 415px) {
     width: 80%;
     align-items: center;
     margin-top: none;
-    height: 200vh;
+    /* height: 200vh; */
   }
 `;
 
 export const TxtTitle = styled.h1`
   font-family: "Stick No Bills";
-  font-size: 5rem;
+  font-size: 2.5rem;
 `;
 
 export const TxtDescription = styled.h4`
-  line-height: 2em;
+  line-height: 1em;
   line-break: anywhere;
 `;
 
 export const CtComments = styled.div`
   /* border: solid 2px yellow; */
-  border-left: solid 4px #8b9ab3;
+  border-left: solid 4px #778ea2;
   padding: 1em;
-  width: 20%;
+  width: 20vw;
   height: 70vh;
+  margin-top:5%;
 
   @media screen and (max-width: 820px) {
     width: 80%;
@@ -115,11 +117,11 @@ export const CtComments = styled.div`
   }
 
   @media screen and (max-width: 415px) {
-    width: 80%;
+    width: 80%; 
     align-items: center;
     margin-top: none;
     border-left: none;
-    border-top: solid 4px #8b9ab3;
+    border-top: solid 4px #778ea2;
   }
 `;
 
@@ -129,5 +131,6 @@ export const TxtListComments = styled.h3`
 `;
 
 export const TxtComments = styled.h5`
-font-weight: normal;
+  font-weight: normal;
+  padding-bottom: 5rem;
 `;

@@ -37,7 +37,7 @@ export function Detail() {
         <TxtDescription>{moment.description}</TxtDescription>
       </CtInfo>
       <CtComments>
-        <TxtListComments>People comments:</TxtListComments>
+        <TxtListComments>How about...</TxtListComments>
         {moment.comments.map((comment, key) => (
           <TxtComments key={key}>{comment.comment}</TxtComments>
         ))}

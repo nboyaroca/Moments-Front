@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const CtNavbar = styled.div`
-  background: linear-gradient(#4E87BE, #062249);
-  border-bottom: solid 2px #062249;
+  background: linear-gradient(#9fc3e3, #283954);
+  border-bottom: solid 2px #283954;
   height: 5rem;
   display: flex;
   justify-content: space-between;
@@ -17,7 +17,7 @@ export const CtNavbar = styled.div`
 `;
 
 export const CtLogo = styled.div`
-width: 50%;
+width: 70vw;
 display: flex;
 justify-content: left;
 align-items: center;
@@ -47,7 +47,8 @@ export const BtMain = styled.button`
   &:hover {
     font-size:2em;
     /* color: #b9f2ff; */
-    color: #7881a1;
+    color: red;
+    opacity: 50%;
   }
   
   @media screen and (max-width: 1085px) {
@@ -59,59 +60,10 @@ export const BtMain = styled.button`
   }
 `;
 
-export const CtSearch = styled.form`
-width: 80%;
-display: flex;
-justify-content: space-evenly;
-align-items: center;
-margin-right: 10%;
-position: relative;
-`;
-
-export const InputSearch = styled.input`
-width: 90%;
-height: 5vh;
-min-width: 10rem;
-padding: 0 5% 0 5%;
-border: none;
-border-radius: 1.5rem;
-outline: none;
-font-size: 1em;
-color: #7881a1;
-background-color: #bfcce1;
---webkit-backdrop-filter: blur( 0.7rem);
-/* position: relative; */
-
-@media screen and (max-width: 1085px) {
-    background-color: transparent;
-    color: transparent;
-  }
-
-  @media screen and (max-width: 490px) {
-    background-color: transparent;
-    color: transparent;
-  }
-
-`;
-
-export const BtSearch = styled.button`
-background: none;
-border: none;
-color: #bfcce1;
-/* position: absolute; */
-
-cursor: pointer;
-&:hover {
-    /* font-size: 1em; */
-    transition: all 0.2s ease-in-out;
-    color: #b9f2ff;
-}
-`;
-
 export const CtMenu = styled.div`
   border: none;
   background-color: transparent;
-  width: 50%;
+  width: 30vw;
   display: flex;
   justify-content: space-evenly;
 `;
@@ -120,8 +72,8 @@ export const BtNavbar = styled.button`
   width: 3.5em;
   height: 2.25em;
   border: none;
-  border-radius: 10%;
-  background-color: #7881a1;
+  border-radius: 0.5em;
+  background-color: #283954;
   color: #bfcce1;
   top: 1.5%;
   right: 3%;
@@ -130,18 +82,18 @@ export const BtNavbar = styled.button`
   font-family: "Stick No Bills";
   font-size: 1em;
   &:hover {
-    background-color: #a6afcd;
-    color: #7881a1;
+    background-color: transparent;
+    color: red;
+    opacity: 50%;
+    font-weight: bolder;
   }
   
   @media screen and (max-width: 1085px) {
-    background-color: transparent;
-    color: transparent;
+    /* display: none; */
   }
 
   @media screen and (max-width: 490px) {
-    background-color: transparent;
-    color: transparent;
+    display: none;
   }
 
 `;

@@ -11,6 +11,7 @@ import {
   CtNavbar,
   Logo,
 } from "./Navbar.sytled";
+import NavbarMobileBottom from "./navbarMobile/NavbarMobileBottom";
 
 
 
@@ -57,6 +58,10 @@ export default function Navbar( props ) {
           <BtNavbar>Sign In</BtNavbar>
         </CtMenu>
       </CtNavbar>
+
+      <NavbarMobileBottom>
+        
+      </NavbarMobileBottom>
     </>
   );
 }

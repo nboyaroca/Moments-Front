@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CtNewMoment = styled.div`
-  background: linear-gradient( #062249, #4E87BE);
+  background: linear-gradient( #283954, #9fc3e3);
   height: 100vh;
   display: flex;
   align-items: center;
