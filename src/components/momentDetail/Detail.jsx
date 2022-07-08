@@ -8,6 +8,7 @@ import {
   CtMoment,
   ImgPicture,
   TxtDescription,
+  TxtDetail,
   TxtTitle,
   TxtComments,
   TxtListComments,
@@ -35,6 +36,7 @@ export function Detail() {
       <CtInfo>
         <TxtTitle>{moment.title}</TxtTitle>
         <TxtDescription>{moment.description}</TxtDescription>
+        <TxtDetail>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima alias non ipsa, dolorem similique quia maxime necessitatibus laboriosam eius totam quidem. Blanditiis, fugiat? Ex distinctio error magnam? Sed, rem ipsam.</TxtDetail>
       </CtInfo>
       <CtComments>
         <TxtListComments>How about...</TxtListComments>

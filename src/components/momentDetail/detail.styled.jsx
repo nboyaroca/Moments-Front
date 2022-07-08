@@ -99,7 +99,14 @@ export const TxtTitle = styled.h1`
 `;
 
 export const TxtDescription = styled.h4`
-  line-height: 1em;
+font-size: 1.5rem;
+  line-height: 2em;
+  text-align: justify;
+`;
+
+export const TxtDetail = styled.h5`
+  line-height: 2em;
+  font-weight: normal;
   line-break: anywhere;
 `;
 
