@@ -11,7 +11,8 @@ export const momentServices = {
     },
 
     createMoment(data) {
-        const createdMoment = axios.post(baseUrl, data).then((res) => res.data);
+        console.log(data)
+        const createdMoment = axios.post(baseUrl, {...data, userId:1}).then((res) => res.data);
         return createdMoment;
     },
 
@@ -21,7 +22,7 @@ export const momentServices = {
     },
 
     updateMoment(id, newMoment) {
-        const updatedMoment = axios.put(baseUrl + id, newMoment).then((res) => res.data);
+        const updatedMoment = axios.put(baseUrl + id, {...newMoment, userId:1}).then((res) => res.data);
         return updatedMoment;
     },
 

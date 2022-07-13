@@ -59,21 +59,15 @@ export function MomentForm() {
   const updateMoment = () => {
     momentServices.updateMoment(id, newMoment).then((res) => {
       if (res) {
-        console.log("updated");
         navigate("/");
       }
     });
-
-    // resetInputsForm();
-    // setIsEditMode(false);
   };
 
   // Funció per buidar el formulari
   const resetInputsForm = () => {
     setNewMoment({ title: "", description: "", imgUrl: "" });
   };
-
-  console.log(newMoment);
 
   return (
     <CtNewMoment>

@@ -53,15 +53,6 @@ export function Moments() {
   //   console.log(momentToEdit);
   // };
 
-  // COMPROVAR SI LA FUNCIÓ ÉS NECESSÀRIA!!!!!!!!!
-  // const editMoment = (moment) => {
-  //   setIsEditMode(!isEditMode);
-  //   // console.log(isEditMode)
-  //   momentServices.getMomentById(moment.id).then(res => {
-  //       setMomentToEdit(res)
-
-  //   })
-  // }
 
   return (
     <>
@@ -78,8 +69,6 @@ export function Moments() {
             key={key}
             moment={moment}
             deleteMoment={deleteMoment}
-
-            /*editMoment={editMoment}*/
           />
         ))}
       </CtMoments>

@@ -43,9 +43,10 @@ export function Card({ moment, deleteMoment, editMoment }) {
             <TxtUser>{moment.user} Astronaut </TxtUser>
           </CtUser>
 
+          {/* aquí ha d'anar el número de comentaris      comments.lenght     */}
           <Anchor href={`/moment/${moment.id}`}><BtButton><i className="fa-regular fa-comments"></i></BtButton></Anchor>
           <Anchor href={`/form/${moment.id}`}><BtButton><span><i className="fa-solid fa-pen-to-square"></i></span></BtButton></Anchor>
-          <BtButton onClick={() => deleteMoment(moment)}><i class="fa-regular fa-trash-can"></i></BtButton>
+          <BtButton onClick={() => deleteMoment(moment)}><i className="fa-regular fa-trash-can"></i></BtButton>
         
         </CtButtons>
       </CtInfo>

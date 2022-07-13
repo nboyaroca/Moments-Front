@@ -1,6 +1,7 @@
 import React from 'react'
 import MomentForm from '../components/forms/MomentForm'
 import Navbar from '../components/navbar/Navbar'
+import NavbarMobileBottom from '../components/navbar/navbarMobile/NavbarMobileBottom'
 
 function MomentFormPage() {
  
@@ -8,6 +9,7 @@ function MomentFormPage() {
     <>
     <Navbar/>
     <MomentForm/>
+    <NavbarMobileBottom/>
     </>
   )
 }
