@@ -16,20 +16,32 @@ export const CtForm = styled.form`
   background-color: aliceblue;
   width: 40%;
   height: 40vh;
+  /* min-width: 500px; */
   margin: 0 auto 100px auto;
   padding: 20px;
   border: solid 1px #4c5a71;
   border-radius: 1em;
 
+  @media screen and (max-width: 1050px) {
+    /* width: 17rem; */
+    font-size: 0.9rem;
+    width: 60%;
+  }
+
   @media screen and (max-width: 415px) {
-    width: 80%;
     font-size: 1.1rem;
+    width: 80%;
   }
 `;
 
 export const Label = styled.text`
+  width: 90%;
   font-size: 1rem;
   font-style: italic;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const CtInput = styled.input`
@@ -39,7 +51,7 @@ export const CtInput = styled.input`
   
   font-family: "Lato", sans-serif;
   font-size: 1em;
-  width: 27rem;
+  width: 100%;
   height: 2rem;
   padding: 0px 15px 0px 15px;
 
@@ -69,13 +81,13 @@ export const CtInput = styled.input`
     color: #dbdce2;
   }
 
-  @media screen and (max-width: 1050px) {
-    width: 17rem;
+  @media screen and (max-width: 1150px) {
+    /* width: 17rem; */
     font-size: 0.9rem;
   }
 
   @media screen and (max-width: 415px) {
-    width: 17rem;
+    /* width: 17rem; */
     font-size: 0.9rem;
   }
 `;
@@ -83,7 +95,7 @@ export const CtInput = styled.input`
 export const CtButtons = styled.div`
 display: flex;
 justify-content: space-evenly;
-column-gap: 40px
+column-gap: 40px;
 `;
 
 export const BtSubmit = styled.button`
@@ -111,6 +123,9 @@ export const BtSubmit = styled.button`
   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
   transform: translate3d(0, 0, 0);
   perspective: 1000px;
+  color: red;
+  opacity: 50%;
+  font-weight: 900;
 }
 
 @keyframes shake {

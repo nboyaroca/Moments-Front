@@ -20,7 +20,7 @@ export const CtDetail = styled.div`
     flex-direction: column;
     align-items: center;
     margin-top: 0px;
-    padding-top: 10%;
+    padding-top: 25%;
     /* height: 100vh; */
   }
 `;

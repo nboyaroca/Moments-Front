@@ -1,4 +1,3 @@
-import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Link } from "react-router-dom";
 import {
@@ -15,11 +14,12 @@ import {
   TxtUser,
   CtUser,
   Anchor,
-  Avatar
+  Avatar,
+  Num
 } from "./Card.styled";
 
-export function Card({ moment, deleteMoment, editMoment }) {
-  console.log(moment)
+export function Card({ moment, deleteMoment }) {
+  // console.log(moment)
   return (
       <CtCard>
       <CtImage>
@@ -31,7 +31,7 @@ export function Card({ moment, deleteMoment, editMoment }) {
       <BtFav>
         <i className="fa-solid fa-gem"></i>
       </BtFav>
-      
+      <Avatar src={moment.publisher.avatar} alt={moment.publisher.userName}></Avatar>
       <CtInfo>
         
         <CtText>
@@ -43,11 +43,11 @@ export function Card({ moment, deleteMoment, editMoment }) {
 
           <CtUser>
             {/* <BtButton><i className="fa-solid fa-user-astronaut"></i></BtButton> */}
-            <Avatar src={moment.publisher.avatar} alt={moment.publisher.userName}></Avatar>
+            
             <TxtUser>{moment.publisher.userName}</TxtUser>
           </CtUser>
 
-          <p> {moment.commentsCount} </p>
+          <Num> {moment.commentsCount} </Num>
           <Anchor href={`/moment/${moment.id}`}><BtButton><i className="fa-regular fa-comments"></i></BtButton></Anchor>
           <Anchor href={`/form/${moment.id}`}><BtButton><span><i className="fa-solid fa-pen-to-square"></i></span></BtButton></Anchor>
           <BtButton onClick={() => deleteMoment(moment)}><i className="fa-regular fa-trash-can"></i></BtButton>

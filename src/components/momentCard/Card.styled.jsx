@@ -46,8 +46,8 @@ export const CtImage = styled.div`
   clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
   overflow: hidden;
   &:hover {
-    width: 102%;
-    transition: all 0.2s ease-in-out;
+    width: 101%;
+    transition: all 0.1s ease-in-out;
   }
 `;
 
@@ -61,8 +61,6 @@ export const BtFav = styled.button`
   position: absolute;
   top: 0.75em;
   left: 0.75em;
-  /* bottom: 4rem;
-  left: 1rem; */
   background-color: transparent;
   /* color: #f6f6e0; #3d4156*/
   color: #bfcce1;
@@ -74,8 +72,9 @@ export const BtFav = styled.button`
   border-radius: 25%;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
-  opacity: 50%;
+  opacity: 70%;
   transition: opacity 0.5s;
+  transition: color 0.5s;
   cursor: pointer;
 
   &:hover {
@@ -127,7 +126,19 @@ export const CtText = styled.div`
 export const TxtUser = styled.h5`
   display: flex;
   justify-content: center;
-  color: #bfcce1;
+  font-family: "Stick No Bills";
+  font-size: 1.1em;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  color: red;
+  opacity: 50%;
+  text-shadow: 1px 1px 1px #bfcce1;
+  
+  
+
+  @media screen and (max-width: 415px) {
+    font-weight: 400;
+  }
 `;
 
 export const TxtTitle = styled.h1`
@@ -198,6 +209,17 @@ export const BtButton = styled.button`
   }
 `;
 
+export const Num = styled.text`
+font-family: "Segoe UI";
+font-size: 1.25em;
+font-weight: 400;
+color: #bfcce1;
+
+@media screen and (max-width: 415px) {
+    font-size: 1.25rem;
+  }
+`;
+
 export const CtUser = styled.div`
 display: flex;
 flex-direction: column;
@@ -207,8 +229,19 @@ padding-bottom: none;
 `;
 
 export const Avatar = styled.img`
-width: 2em;
-height: 2em;
+width: 2.5em;
+height: 2.5em;
 border-radius: 50%;
 border: none;
+position: absolute;
+bottom: 2.1em;
+left: 1.1em;
+z-index: 1;
+overflow: hidden;
+  &:hover {
+    width: 3.5em;
+    height: 3.5em;
+    transition: all 0.2s ease-in-out;
+  }
+
 `;
