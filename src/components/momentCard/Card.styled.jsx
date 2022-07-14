@@ -169,7 +169,6 @@ export const CtButtons = styled.div`
   @media screen and (max-width: 415px) {
     height: 60px;
   }
-
 `;
 
 export const BtButton = styled.button`
@@ -205,4 +204,11 @@ flex-direction: column;
 align-items: flex-start;
 padding-right: 2rem;
 padding-bottom: none;
+`;
+
+export const Avatar = styled.img`
+width: 2em;
+height: 2em;
+border-radius: 50%;
+border: none;
 `;

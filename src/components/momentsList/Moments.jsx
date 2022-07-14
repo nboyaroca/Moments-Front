@@ -14,9 +14,15 @@ export function Moments() {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    search === "" ? getAllMoments() : getBySearch(search);
-  }, [search, moments]);
+    getAllMoments();
+  }, []) // Com el componentDidMount
 
+  useEffect(() => {
+    search === "" ? getAllMoments() : getBySearch(search);
+  }, [search]);
+
+
+  // FUNCIÓ PER CARREGAR TOTS EL MOMENTS
   const getAllMoments = () => {
     momentServices.getAllMoments().then((res) => {
       setMoments(res);

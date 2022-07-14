@@ -38,3 +38,4 @@ export const momentServices = {
 
 };
 
+// ATENCIÓ: Quan tinguem més d'un usuari caldrà canviar el "userId: 1" per logged user

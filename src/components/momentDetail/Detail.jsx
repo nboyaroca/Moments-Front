@@ -16,27 +16,35 @@ import {
 } from "./detail.styled";
 
 export function Detail() {
-  const [moment, setMoment] = useState({ comment: [] });
-  // const [comments, setComments] = useState([]);
+  const [moment, setMoment] = useState([]); // without comments useState ({ comment: [] })
+  const [comments, setComments] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
     getMomentById(id);
-    // getCommentsByMomentId(id);
   }, [id]);
 
+  useEffect(() => {
+    if(!comments) return
+  }, [comments])
+
+  
+  // GET UN MOMENT SEGONS EL SEU ID
   const getMomentById = (id) => {
     momentServices.getMomentById(id).then((res) => {
-      setMoment(res);
+      if(res) {
+        setMoment(res);
+      getCommentsByMomentId();
+      }
     });
   };
 
   // GET COMENTARIS D'UN MOMENT ID
-  // const getCommentsByMomentId = (id) => {
-  //   commentServices.getCommentsByMomentId(id).then((res) => {
-  //     setComments(res);
-  //   })
-  // }
+  const getCommentsByMomentId = () => {
+    commentServices.getCommentsByMomentId(id).then((res) => {
+      setComments(res);
+    })
+  }
 
 
   return (
@@ -49,12 +57,12 @@ export function Detail() {
         <TxtDescription>{moment.description}</TxtDescription>
         <TxtDetail>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima alias non ipsa, dolorem similique quia maxime necessitatibus laboriosam eius totam quidem. Blanditiis, fugiat? Ex distinctio error magnam? Sed, rem ipsam.</TxtDetail>
       </CtInfo>
-      {/* <CtComments>
+      <CtComments>
         <TxtListComments>How about...</TxtListComments>
         {comments.map((comment, key) => (
-          <TxtComments key={key} comment={comment}></TxtComments>
+          <TxtComments key={key} comment={comment}>{comment.comment}</TxtComments>
         ))}
-      </CtComments> */}
+      </CtComments>
     </CtDetail>
   );
 }
