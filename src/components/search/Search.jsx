@@ -7,6 +7,8 @@ function Search( {search, setSearch, getBySearch} ) { //entre curly brakets perq
 
   const onInputChange = (e) => {
     //està atent al què introduïm a l'input
+    // if(e.target.value.length>=3) {
+    //   console.log(e.target.value.length)
     setSearch(e.target.value);
   };
 
@@ -21,9 +23,10 @@ function Search( {search, setSearch, getBySearch} ) { //entre curly brakets perq
         onChange={onInputChange}
         type="search"
         name="search"
+        minlength="3"
         placeholder="Search..."
-        autocomplete="on"
-        value={search}/>
+        // autocomplete="on"
+        value={search || ''}/>
       <BtSearch type="submit">
         <i className="fa-solid fa-magnifying-glass"></i>
       </BtSearch>

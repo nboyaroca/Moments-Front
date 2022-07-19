@@ -70,7 +70,7 @@ export function Moments() {
         />
       </CtSearch>
       <CtMoments>
-        {moments.map((moment, key) => (
+        {moments.reverse().map((moment, key) => (
           <Card
             key={key}
             moment={moment}
