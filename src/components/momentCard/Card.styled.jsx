@@ -57,6 +57,20 @@ export const Picture = styled.img`
   width: 100%;
 `;
 
+export const NumFav = styled.text`
+position: absolute;
+top: 2.7em;
+left: 1.2em;
+font-family: "Segoe UI";
+font-size: 0.7em;
+font-weight: 400;
+color: #bfcce1;
+
+@media screen and (max-width: 415px) {
+    font-size: 1rem;
+  }
+`;
+
 export const BtFav = styled.button`
   position: absolute;
   top: 0.75em;
@@ -209,7 +223,7 @@ export const BtButton = styled.button`
   }
 `;
 
-export const Num = styled.text`
+export const NumComment = styled.text`
 font-family: "Segoe UI";
 font-size: 1.25em;
 font-weight: 400;

@@ -72,11 +72,12 @@ export function MomentForm() {
   return (
     <CtNewMoment>
       <CtForm onSubmit={handleSubmit}>
-        <Label>
+        <Label for="title">
           Enter the name of the new picture:
           <CtInput
             type="text"
             name="title"
+            aria-label="title"
             placeholder="Moment title"
             value={newMoment.title ||''}
             onChange={onInputChange}
@@ -87,6 +88,7 @@ export function MomentForm() {
           <CtInput
             type="text"
             name="description"
+            aria-label="description"
             placeholder="Moment description"
             value={newMoment.description ||''}
             onChange={onInputChange}
@@ -97,6 +99,7 @@ export function MomentForm() {
           <CtInput
             type="url"
             name="imgUrl"
+            aria-label="imgUrl"
             placeholder="Image URL"
             value={newMoment.imgUrl ||''}
             onChange={onInputChange}

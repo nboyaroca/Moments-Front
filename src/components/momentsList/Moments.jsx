@@ -5,6 +5,7 @@ import { CtMoments, CtSearch } from "./Moments.styled";
 // import data from "../../assets/data/dbMoments.json"
 import { momentServices } from "../../services/momentServices";
 import Search from "../search/Search"; //per importar per default no curly brakets
+import { likeServices } from "../../services/likeService";
 
 export function Moments() {
   const [moments, setMoments] = useState([]);
@@ -47,6 +48,15 @@ export function Moments() {
     });
   };
 
+  // FUNCIÓ PER POSAR LIKE A UN MOMENT
+  const like = (data) => {
+    likeServices.createLike(data.id).then(res => {
+      if (res) {
+        
+      }
+    })
+  }
+
   //una altra versió per agafar els moments
   // let filterMoments = moments.filter(item => item.id !==moment.id);
   // setMoments(filterMoments);
@@ -75,6 +85,7 @@ export function Moments() {
             key={key}
             moment={moment}
             deleteMoment={deleteMoment}
+            like={like}
           />
         ))}
       </CtMoments>

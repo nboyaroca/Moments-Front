@@ -15,10 +15,11 @@ import {
   CtUser,
   Anchor,
   Avatar,
-  Num
+  NumComment,
+  NumFav
 } from "./Card.styled";
 
-export function Card({ moment, deleteMoment }) {
+export function Card({ moment, deleteMoment, like }) {
   // console.log(moment)
   return (
       <CtCard>
@@ -28,7 +29,8 @@ export function Card({ moment, deleteMoment }) {
         </Link>
       </CtImage>
       
-      <BtFav>
+      <NumFav> {moment.likesCount}</NumFav>
+      <BtFav onClick={() => like(like.id)}>
         <i className="fa-solid fa-gem"></i>
       </BtFav>
       <Avatar src={moment.publisher.avatar} alt={moment.publisher.userName}></Avatar>
@@ -47,7 +49,7 @@ export function Card({ moment, deleteMoment }) {
             <TxtUser>{moment.publisher.userName}</TxtUser>
           </CtUser>
 
-          <Num> {moment.commentsCount} </Num>
+          <NumComment> {moment.commentsCount} </NumComment>
           <Anchor href={`/moment/${moment.id}`}><BtButton><i className="fa-regular fa-comments"></i></BtButton></Anchor>
           <Anchor href={`/form/${moment.id}`}><BtButton><span><i className="fa-solid fa-pen-to-square"></i></span></BtButton></Anchor>
           <BtButton onClick={() => deleteMoment(moment)}><i className="fa-regular fa-trash-can"></i></BtButton>
