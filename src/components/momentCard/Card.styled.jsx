@@ -71,6 +71,7 @@ color: #bfcce1;
   }
 `;
 
+
 export const BtFav = styled.button`
   position: absolute;
   top: 0.75em;
@@ -91,12 +92,18 @@ export const BtFav = styled.button`
   transition: color 0.5s;
   cursor: pointer;
 
+  .active {
+    color: red !important;
+    opacity: 50%;
+    transition: opacity 0.5s;
+  }
+
   &:hover {
     color: red;
     opacity: 50%;
     /* color: #b9f2ff;
     opacity: 100%; */
-    /* transition: opacity 0.5s; */
+    transition: opacity 0.5s;
   }
   
   @media screen and (max-width: 820px) {
@@ -242,7 +249,7 @@ padding-right: 2rem;
 padding-bottom: none;
 `;
 
-export const Avatar = styled.img`
+export const Avatar = styled.div`
 width: 2.5em;
 height: 2.5em;
 border-radius: 50%;
@@ -252,10 +259,17 @@ bottom: 2.1em;
 left: 1.1em;
 z-index: 1;
 overflow: hidden;
-  &:hover {
-    width: 3.5em;
-    height: 3.5em;
-    transition: all 0.2s ease-in-out;
-  }
 
+&:hover {
+  width: 3.5em;
+  height: 3.5em;
+  transition: all 0.2s ease-in-out;
+}
 `;
+
+export const AvatarImg = styled.img`
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center;
+`

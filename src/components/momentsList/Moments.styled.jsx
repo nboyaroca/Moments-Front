@@ -33,6 +33,7 @@ export const CtMoments = styled.div`
     grid-template-columns: 90%;
     justify-items: center;
     height: auto;
+    padding-bottom: 7rem;
   }
 `;
 

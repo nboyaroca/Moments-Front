@@ -14,9 +14,10 @@ import {
   TxtUser,
   CtUser,
   Anchor,
-  Avatar,
   NumComment,
-  NumFav
+  NumFav,
+  Avatar,
+  AvatarImg
 } from "./Card.styled";
 
 export function Card({ moment, deleteMoment, like }) {
@@ -29,11 +30,13 @@ export function Card({ moment, deleteMoment, like }) {
         </Link>
       </CtImage>
       
-      <NumFav> {moment.likesCount}</NumFav>
-      <BtFav onClick={() => like(like.id)}>
-        <i className="fa-solid fa-gem"></i>
+      <NumFav>{moment.likesCount}</NumFav>
+      {/*moment dins like és la data que envio a la funció like*/}
+      <BtFav onClick={() => like(moment.id)}>
+        {moment.liked ? "true" : "false" }
+        {/*<i className="fa-solid fa-heart"/> : <i className="fa-solid fa-gem"/>*/}
       </BtFav>
-      <Avatar src={moment.publisher.avatar} alt={moment.publisher.userName}></Avatar>
+      <Avatar><AvatarImg src={moment.publisher.avatar} alt={moment.publisher.userName}/></Avatar>
       <CtInfo>
         
         <CtText>
