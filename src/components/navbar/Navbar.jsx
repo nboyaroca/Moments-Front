@@ -54,8 +54,12 @@ export default function Navbar( props ) {
           <Link to="/form">
             <BtNavbar>NEW</BtNavbar>
           </Link>
-          <BtNavbar>Log In</BtNavbar>
-          <BtNavbar>Sign In</BtNavbar>
+          <Link to="/login">
+            <BtNavbar>Log In</BtNavbar>
+          </Link>
+          <Link to="/login">
+            <BtNavbar>Sign Up</BtNavbar>
+          </Link>
         </CtMenu>
       </CtNavbar>
 

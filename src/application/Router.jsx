@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import App from '../App'
-import { LoginPage } from '../pages/LoginPage'
+import LoginPage from '../pages/LoginPage'
 import MomentFormPage from '../pages/MomentFormPage'
 import MomentPage from '../pages/MomentPage'
 

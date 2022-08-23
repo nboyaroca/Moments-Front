@@ -72,7 +72,7 @@ export function MomentForm() {
   return (
     <CtNewMoment>
       <CtForm onSubmit={handleSubmit}>
-        <Label for="title">
+        <Label htmlFor="title">
           Enter the name of the new picture:
           <CtInput
             type="text"

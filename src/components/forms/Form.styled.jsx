@@ -34,7 +34,7 @@ export const CtForm = styled.form`
   }
 `;
 
-export const Label = styled.text`
+export const Label = styled.label`
   width: 90%;
   font-size: 1rem;
   font-style: italic;
