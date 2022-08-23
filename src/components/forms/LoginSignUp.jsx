@@ -2,6 +2,8 @@ import { useState } from "react";
 import { CtForm, CtInput, Label, BtSubmit } from "../../components/forms/Form.styled";
 import { CtButtons } from "../momentCard/Card.styled";
 import { authService } from "../../services/authService";
+import { AuthUtils } from "../../services/localAuthService";
+import { useNavigate } from "react-router-dom";
 
 export const LoginSignup = () => {
   
@@ -12,20 +14,36 @@ export const LoginSignup = () => {
     password: "",
   });
 
+  let navigate = useNavigate();
+
   //page
   const signup = () => {
+    AuthUtils.deleteAuthUser();
     authService.signup(userData).then((res) => {
       console.log(res);
+    login(); // executa login automàtic i navigate to home
+    resetInputs(); // és necessari?
+    // catch o no
     });
-    resetInputs();
   };
 
   const login = () => {
-    delete userData["email"];
+    console.log(userData)
     authService.login(userData).then((res) => {
       console.log(res);
+      console.log(res.username);
+
+      const authUser = {
+        token: res.accessToken,
+        username: res.username,
+        id: res.id,
+      };
+
+    AuthUtils.saveAuthUser(authUser);
+    navigate("/", { replace: true });
+
     });
-    resetInputs();
+    resetInputs(); // és necessari?
   };
 
   //form
