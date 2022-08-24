@@ -78,7 +78,7 @@ export const BtFav = styled.button`
   left: 0.75em;
   background-color: transparent;
   /* color: #f6f6e0; #3d4156*/
-  color: #bfcce1;
+  color: ${ ({isLiked}) => isLiked ?  "red" : "#bfcce1"};
   opacity: initial;
   /* width: 1em;
   height: 1em; */
@@ -92,11 +92,11 @@ export const BtFav = styled.button`
   transition: color 0.5s;
   cursor: pointer;
 
-  .active {
+  /* .active {
     color: red !important;
     opacity: 50%;
     transition: opacity 0.5s;
-  }
+  } */
 
   &:hover {
     color: red;

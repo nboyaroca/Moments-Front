@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 // import { momentServices } from "../../services/momentServices";
 import shotcut from "../../assets/img/shotcut-logo.svg";
+import { AuthUtils } from "../../services/localAuthService";
 import {
   BtNavbar,
   BtMain,
@@ -57,9 +58,10 @@ export default function Navbar( props ) {
           <Link to="/login">
             <BtNavbar>Log In</BtNavbar>
           </Link>
-          <Link to="/login">
+          <Link to="/signup">
             <BtNavbar>Sign Up</BtNavbar>
           </Link>
+          <BtNavbar onClick={AuthUtils.deleteAuthUser}>Log Out</BtNavbar>
         </CtMenu>
       </CtNavbar>
 

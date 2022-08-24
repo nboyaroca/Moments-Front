@@ -15,6 +15,7 @@ export default function Router() {
             <Route path="/form" element={<MomentFormPage/>}/>
             <Route path="/form/:id" element={<MomentFormPage/>}/>
             <Route path="/login" element={<LoginPage />}/>
+            <Route path="/signup" element={<LoginPage />}/>
         </Routes>
     </BrowserRouter>
   )

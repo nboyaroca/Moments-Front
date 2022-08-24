@@ -23,5 +23,6 @@ export const AuthUtils = {
 
     deleteAuthUser() {
       localStorage.removeItem("auth");
+      window.location.assign("/");
     }
   };

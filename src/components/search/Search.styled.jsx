@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const FormSearch = styled.form`
 margin: 0;
-padding: 20px 0 0 20px;
+padding: 20px;
+/* padding: 20px 0 0 20px; */
 background-color: #283954;
 width: 100%;
 display: flex;

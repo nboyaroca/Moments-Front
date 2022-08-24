@@ -14,6 +14,8 @@ export function Moments() {
 
   const [search, setSearch] = useState("");
 
+  const [isLiked, setIsLiked] = useState(false);
+
   useEffect(() => {
     getAllMoments();
   }, []) // Com el componentDidMount
@@ -52,9 +54,11 @@ export function Moments() {
   const like = (id) => {
     likeServices.toggleLike(id).then(res => {
       console.log(res)
+      setIsLiked(true)
         getAllMoments()
       }
    )
+   setIsLiked(false);
    getAllMoments();
   };
 
@@ -89,6 +93,7 @@ export function Moments() {
             moment={moment}
             deleteMoment={deleteMoment}
             like={like}
+            isLiked={isLiked}
           />
         ))}
       </CtMoments>

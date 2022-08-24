@@ -1,22 +1,16 @@
 import styled from "styled-components";
-import img from "../../assets/img/Background.jpg";
 
 
 export const CtMoments = styled.div`
   /* height: 100vh; */
   padding: 2em 0 2em 0;
-  background: linear-gradient(#283954, #9fc3e3);
-  background-color: #8b9ab3;
+  /* background: linear-gradient(#283954, #9fc3e3); */
+  /* background-color: #8b9ab3; */
   display: grid;
   grid-template-columns: 20% 20% 20% 20%;
   grid-row-gap: 2em;
   justify-content: space-evenly;
   
-  /* background-image: url(${img});
-  &::content{
-    opacity: 0.5;
-  } */
-
   @media screen and (max-width: 1085px) {
     grid-template-columns: 30% 30% 30%;
     justify-items: center;
@@ -26,13 +20,13 @@ export const CtMoments = styled.div`
   @media screen and (max-width: 820px) {
     grid-template-columns: 45% 45%;
     justify-items: center;
-    height: auto;
+    /* height: auto; */
   }
 
   @media screen and (max-width: 490px) {
     grid-template-columns: 90%;
     justify-items: center;
-    height: auto;
+    /* height: auto; */
     padding-bottom: 7rem;
   }
 `;

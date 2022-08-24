@@ -3,7 +3,8 @@ import { CtForm, CtInput, Label, BtSubmit } from "../../components/forms/Form.st
 import { CtButtons } from "../momentCard/Card.styled";
 import { authService } from "../../services/authService";
 import { AuthUtils } from "../../services/localAuthService";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 export const LoginSignup = () => {
   
@@ -16,6 +17,11 @@ export const LoginSignup = () => {
 
   let navigate = useNavigate();
 
+  const location = useLocation().pathname
+
+  useEffect(() => {
+  },[location])
+
   //page
   const signup = () => {
     AuthUtils.deleteAuthUser();
@@ -25,6 +31,7 @@ export const LoginSignup = () => {
     resetInputs(); // és necessari?
     // catch o no
     });
+
   };
 
   const login = () => {
@@ -68,6 +75,8 @@ export const LoginSignup = () => {
     });
   };
 
+console.log(location);
+
   return (
     <div
       style={{
@@ -89,7 +98,8 @@ export const LoginSignup = () => {
           value={userData.username}
           onChange={onInputChange}
         />
-        <Label htmlFor="email" />
+        {location==="/signup" && 
+        <><Label htmlFor="email" />
         <CtInput
           type="email"
           name="email"
@@ -98,6 +108,7 @@ export const LoginSignup = () => {
           value={userData.email}
           onChange={onInputChange}
         />
+        </>} 
         <Label htmlFor="password" />
         <CtInput
           type="password"
@@ -108,12 +119,14 @@ export const LoginSignup = () => {
           onChange={onInputChange}
         />
         <CtButtons>
+          {location==="/login" ? 
           <BtSubmit type="submit" id="login" onClick={handleSubmit}>
-            LOGIN
-          </BtSubmit>
+            LOG IN
+          </BtSubmit> :
           <BtSubmit type="submit" id="signup" onClick={handleSubmit}>
-            SIGNUP
+            SIGN UP
           </BtSubmit>
+          }
         </CtButtons>
       </CtForm>
     </div>

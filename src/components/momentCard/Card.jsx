@@ -20,7 +20,7 @@ import {
   AvatarImg
 } from "./Card.styled";
 
-export function Card({ moment, deleteMoment, like }) {
+export function Card({ moment, deleteMoment, like, isLiked }) {
   // console.log(moment)
   return (
       <CtCard>
@@ -29,13 +29,23 @@ export function Card({ moment, deleteMoment, like }) {
           <Picture src={moment.imgUrl} alt={moment.title}></Picture>
         </Link>
       </CtImage>
-      
+
+      {moment.liked ? ( 
+        <>
       <NumFav>{moment.likesCount}</NumFav>
-      {/*moment dins like és la data que envio a la funció like*/}
-      <BtFav onClick={() => like(moment.id)}>
-        {moment.liked ? "true" : "false" }
-        {/*<i className="fa-solid fa-heart"/> : <i className="fa-solid fa-gem"/>*/}
+      <BtFav onClick={() => like(moment.id)} isLiked={isLiked}>
+        <i className="fa-solid fa-gem"/> 
       </BtFav>
+      </>
+      ) : (
+        <>
+      <NumFav>{moment.likesCount}</NumFav>
+      <BtFav onClick={() => like(moment.id)}>
+        <i className="fa-regular fa-gem"/>
+      </BtFav>
+      </>
+      )}
+
       <Avatar><AvatarImg src={moment.publisher.avatar} alt={moment.publisher.userName}/></Avatar>
       <CtInfo>
         

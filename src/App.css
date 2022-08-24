@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+body {
+  background: linear-gradient(#283954, #9fc3e3);
+  height: 100vh;
+}
+  
+@media screen and (max-width: 490px) {
+    body {
+      height: auto;
+    }
+}
+
 :root {
   --main-bg-color: #bfcce1;
 }
