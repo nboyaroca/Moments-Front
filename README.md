@@ -1,3 +1,64 @@
+# 📷 MomentsApp
+
+Show your city moments or watch others.
+Write comments on some moments and if you like them, just click on the diamond.
+
+&nbsp;
+
+## Contents
+1. [General Info](#general-info)
+2. [Technologies](#technologies)
+3. [Installation](#installation)
+
+***
+## General Info
+
+This app lets you make a CRUD from an API, login as an authUser with JSON Web Token.
+Client-side developement using React.js with styled-components & Server-side developement using Java with Spring Boot.
+All services routes are protected at an authorization level. Fill the form to Sign Up or Log In and expand the moments network
+
+#### UI Design
+
+
+### Technologies & Tools 🔧
+
+>HTLM5
+>CSS 3
+>React.js
+>Node.js
+>Axios
+
+API Rest 
+
+>Spring Boot
+>Gradel
+>JPA
+>JUnit y Mockito
+>H2 Hibernate
+>Postman
+
+&nbsp;
+
+### Installation ⚙️
+- Required React v.18.2.0
+- Required node.js
+- git clone
+- npm start
+- run Moment-back
+
+&nbsp;
+
+#### NEXT STEPS 👣
+Use a cloud service to push the pictures.
+
+&nbsp;
+#### THANKS TO ✔️
+All my classmates that, despite being an individual project, they have all been there to help and encourage me.
+
+My F5 Formers, for their patience and good mood.
+
+&nbsp;
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

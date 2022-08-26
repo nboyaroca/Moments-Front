@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { AuthUtils } from "../../services/localAuthService";
 import {
   BtButton,
   CtButtons,
@@ -46,7 +47,7 @@ export function Card({ moment, deleteMoment, like, isLiked }) {
       </>
       )}
 
-      <Avatar><AvatarImg src={moment.publisher.avatar} alt={moment.publisher.userName}/></Avatar>
+      <Avatar><AvatarImg src={moment.publisher.avatar} alt={moment.publisher.username}/></Avatar>
       <CtInfo>
         
         <CtText>
@@ -59,14 +60,19 @@ export function Card({ moment, deleteMoment, like, isLiked }) {
           <CtUser>
             {/* <BtButton><i className="fa-solid fa-user-astronaut"></i></BtButton> */}
             
-            <TxtUser>{moment.publisher.userName}</TxtUser>
+            <TxtUser>{moment.publisher.username}</TxtUser>
           </CtUser>
 
           <NumComment> {moment.commentsCount} </NumComment>
+
           <Anchor href={`/moment/${moment.id}`}><BtButton><i className="fa-regular fa-comments"></i></BtButton></Anchor>
+          
+          { AuthUtils.isAuthor(moment) &&
+          <>
           <Anchor href={`/form/${moment.id}`}><BtButton><span><i className="fa-solid fa-pen-to-square"></i></span></BtButton></Anchor>
           <BtButton onClick={() => deleteMoment(moment)}><i className="fa-regular fa-trash-can"></i></BtButton>
-        
+          </>}
+
         </CtButtons>
       </CtInfo>
     </CtCard>

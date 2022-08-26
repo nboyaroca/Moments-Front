@@ -6,7 +6,7 @@
 
 body {
   background: linear-gradient(#283954, #9fc3e3);
-  height: 100vh;
+  /* height: auto; */
 }
   
 @media screen and (max-width: 490px) {

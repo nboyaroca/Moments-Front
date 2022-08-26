@@ -25,10 +25,10 @@ export const LoginSignup = () => {
   //page
   const signup = () => {
     AuthUtils.deleteAuthUser();
+    console.log(userData);
     authService.signup(userData).then((res) => {
       console.log(res);
     login(); // executa login automàtic i navigate to home
-    resetInputs(); // és necessari?
     // catch o no
     });
 
@@ -49,8 +49,8 @@ export const LoginSignup = () => {
     AuthUtils.saveAuthUser(authUser);
     navigate("/", { replace: true });
 
-    });
     resetInputs(); // és necessari?
+    });
   };
 
   //form
@@ -61,11 +61,11 @@ export const LoginSignup = () => {
     setUserData({ ...userData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(userData);
-    e.target.id === "login" ? login() : signup();
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log(userData);
+  //   e.target.id === "login" ? login() : signup();
+  // };
 
   const resetInputs = () => {
     setUserData({
@@ -99,13 +99,23 @@ console.log(location);
           onChange={onInputChange}
         />
         {location==="/signup" && 
-        <><Label htmlFor="email" />
+        <>
+        <Label htmlFor="email" />
         <CtInput
           type="email"
           name="email"
           aria-label="email"
           placeholder="User email"
           value={userData.email}
+          onChange={onInputChange}
+        />
+        <Label htmlFor="image" />
+        <CtInput
+          type="url"
+          name="imgUrl"
+          aria-label="imgUrl"
+          placeholder="Avatar"
+          value={userData.avatar}
           onChange={onInputChange}
         />
         </>} 
@@ -120,10 +130,11 @@ console.log(location);
         />
         <CtButtons>
           {location==="/login" ? 
-          <BtSubmit type="submit" id="login" onClick={handleSubmit}>
+          <BtSubmit type="button" id="login" onClick={login}>
             LOG IN
           </BtSubmit> :
-          <BtSubmit type="submit" id="signup" onClick={handleSubmit}>
+          // <BtSubmit type="submit" id="signup" onClick={handleSubmit}>
+          <BtSubmit type="button" id="signup" onClick={signup}>
             SIGN UP
           </BtSubmit>
           }

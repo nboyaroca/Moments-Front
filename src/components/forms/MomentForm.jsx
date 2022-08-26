@@ -111,9 +111,12 @@ export function MomentForm() {
           ) : (
             <BtSubmit type="submit">SUBMIT</BtSubmit>
           )}
-          <BtSubmit type="reset" onClick={resetInputsForm}>
-            CANCEL
-          </BtSubmit>
+          
+        <BtSubmit type="reset" onClick={resetInputsForm}>
+          CANCEL
+        </BtSubmit>
+          
+          
         </CtButtons>
       </CtForm>
     </CtNewMoment>

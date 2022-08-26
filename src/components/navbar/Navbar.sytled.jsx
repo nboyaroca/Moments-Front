@@ -9,7 +9,7 @@ export const CtNavbar = styled.div`
   align-items: center;
   /* position: fixed;
   z-index: 1; */
-  width: 100vw;
+  /* width: 100vw; */
   margin-top: -1;
   color: white;
   display: flex;

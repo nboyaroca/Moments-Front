@@ -1,7 +1,7 @@
 export const AuthUtils = {
     
     isAuthor(object) {
-      if (this.getAuthUser().id !== object.author.id) return false;
+      if (this.getAuthUser().id !== object.publisher.id) return false;
       return true;
     },
   
@@ -23,6 +23,5 @@ export const AuthUtils = {
 
     deleteAuthUser() {
       localStorage.removeItem("auth");
-      window.location.assign("/");
     }
   };

@@ -61,7 +61,9 @@ export default function Navbar( props ) {
           <Link to="/signup">
             <BtNavbar>Sign Up</BtNavbar>
           </Link>
-          <BtNavbar onClick={AuthUtils.deleteAuthUser}>Log Out</BtNavbar>
+          <Link to="/login">
+            <BtNavbar onClick={AuthUtils.deleteAuthUser}>Log Out</BtNavbar>
+          </Link>
         </CtMenu>
       </CtNavbar>
 
